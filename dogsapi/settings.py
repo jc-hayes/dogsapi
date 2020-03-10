@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework', # add the django rest framework
-    'corsheaders', # add coros
-    'dogs'
+    # 'corsheaders', # add coros
+    'dogs.apps.DogsConfig'
 ]
 
 REST_FRAMEWORK = {
@@ -50,7 +50,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware', # cors middleware
+    # 'corsheaders.middleware.CorsMiddleware', # cors middleware
     'django.middleware.common.CommonMiddleware', # cors middleware
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -61,9 +61,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-]
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:3000',
+# ]
 
 ROOT_URLCONF = 'dogsapi.urls'
 
